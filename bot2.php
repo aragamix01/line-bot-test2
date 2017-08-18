@@ -17,8 +17,8 @@
     ];
     $post = json_encode($data);
     $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $cToken);
-
-
+        $content = file_get_contents('php://input');
+        $events = json_decode($content, true);
         if(is_null($events)){
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
