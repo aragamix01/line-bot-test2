@@ -13,7 +13,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			//$text = $event['message']['text'];
-            $text = $event['type'];
+            $text = $source['type'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
@@ -32,7 +32,6 @@ if (!is_null($events['events'])) {
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
             
-           // sleep(10);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
