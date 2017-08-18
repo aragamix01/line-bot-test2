@@ -3,19 +3,12 @@
     $myToken = 'U44f0ae5516e30be72d074400a86ef343';
     $secret = 'd4f35b7ecb191edd8b6a48631d06780d';
     $cToken = '5fUwVGVAEzh0STff4waRo1361kbdfS306CJ+pVaO9+T7dXfrSLum6m0nAWpDx3hOKBVKPiebT7tVDcwT3MPSZYKiKYX0M2RSAgpDu2pFnjHw4YziX8CTgyyqZcgT39OjtOc+OatIxAfp/J+d/YTNRQdB04t89/1O/w1cDnyilFU=';
-    // $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($cToken);
-    // $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $secret]);
-
-    // $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello');
-    // $response = $bot->pushMessage($token, $textMessageBuilder);
-
-    // echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
     $url = 'https://api.line.me/v2/bot/message/push';
 
     $messages = [
 				'type' => 'text',
-				'text' => "ทุกๆคนที่เข้ามาใหม่ครับ เมื่อเข้ามาแล้วให้ทำดังนี้นะครับ (love) \n -แนะนำตัวเอง \n -ประทับใจอะไรใน bnk48 (1 heart)(1 heart)"
+				'text' => "ทุกๆคนที่เข้ามาใหม่ครับ เมื่อเข้ามาแล้วให้ทำดังนี้นะครับ  \n -แนะนำตัวเอง \n -ประทับใจอะไรใน bnk48 "
 	];
 
     $data = [
