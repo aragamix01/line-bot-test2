@@ -31,7 +31,7 @@
                 curl_close($ch);
                 echo $result . "\r\n"; 
             }
-            sleep(15);
+            sleep(100);
         }
         echo 'ok';
 ?>
