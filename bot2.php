@@ -12,7 +12,7 @@
 	];
 
     $data = [
-        'to' => $roomToken,
+        'to' => $myToken,
         'messages' => [$messages],
     ];
     $post = json_encode($data);
