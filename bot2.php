@@ -11,7 +11,7 @@
 
     // echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
-    $url = 'https://api.line.me/v2/bot/message/reply';
+    $url = 'https://api.line.me/v2/bot/message/push';
 
     $messages = [
 				'type' => 'text',
