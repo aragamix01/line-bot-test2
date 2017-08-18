@@ -26,7 +26,6 @@
     $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $cToken);
 
     while(1){
-        sleep(200);
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -36,5 +35,6 @@
         $result = curl_exec($ch);
         curl_close($ch);
         echo $result . "\r\n";
+        sleep(200);
     }
 ?>
