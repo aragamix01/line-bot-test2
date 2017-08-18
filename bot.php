@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			//$text = $event['message']['text'];
             $scr = $event['source'];
-            $text = $scr['userId'];
+            $text = $scr['groupId'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
