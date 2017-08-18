@@ -12,7 +12,7 @@
 	];
 
     $data = [
-        'to' => $myToken,
+        'to' => $roomToken,
         'messages' => [$messages],
     ];
     $post = json_encode($data);
@@ -31,7 +31,7 @@
                 curl_close($ch);
                 echo $result . "\r\n"; 
             }
-            sleep(100);
+            sleep(180);
         }
         echo 'ok';
 ?>
