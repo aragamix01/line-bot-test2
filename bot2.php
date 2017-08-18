@@ -18,7 +18,7 @@
     $post = json_encode($data);
     $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $cToken);
 
-    //while(1){
+
         if(!isset($events)){
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -28,8 +28,6 @@
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
             $result = curl_exec($ch);
             curl_close($ch);
-            echo $result . "\r\n";
-     //   }
-     //   sleep(10);
-    }
+            echo $result . "\r\n"; 
+        }
 ?>
