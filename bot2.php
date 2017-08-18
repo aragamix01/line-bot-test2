@@ -15,7 +15,7 @@
 
     $messages = [
 				'type' => 'text',
-				'text' => 'test'
+				'text' => 'ทุกๆคนที่เข้ามาใหม่ครับ เมื่อเข้ามาแล้วให้ทำดังนี้นะครับ \n -แนะนำตัวเอง (love) \n -ประทับใจอะไรใน bnk48 (1 heart)(1 heart)'
 	];
 
     $data = [
@@ -26,7 +26,7 @@
     $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $cToken);
 
     while(1){
-        sleep(10);
+        sleep(200);
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
