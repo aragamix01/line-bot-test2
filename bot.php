@@ -49,6 +49,14 @@ if (!is_null($events['events'])) {
 				7 => [
 					'keywords' => 'สวย',
 					'ans' => 'เชเช่'
+				],
+				8 => [
+					'keywords' => 'กาก',
+					'ans' => 'SO VERY กระจอก'
+				],
+				9 => [
+					'keywords' => 'บอท',
+					'ans' => 'เรื่องของบอท'
 				]
 			];
 
