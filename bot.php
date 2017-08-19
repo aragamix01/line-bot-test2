@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
 					'ans' => 'สีเหลือง'
 				],
 				1 => [
-					'keywords' => 'จังหวัด บ้านเกิด',
+					'keywords' => 'จังหวัด',
 					'ans' => 'สิงค์บุรี'
 				],
 				2 => [
@@ -38,6 +38,14 @@ if (!is_null($events['events'])) {
 				5 => [
 					'keywords' => 'เทศการ',
 					'ans' => 'คริสมาสต์'
+				],
+				6 => [
+					'keywords' => 'ช้อน',
+					'ans' => 'จ๋าาา..'
+				],
+				7 => [
+					'keywords' => 'สวย',
+					'ans' => 'เชเช่'
 				]
 			];
 
@@ -50,39 +58,41 @@ if (!is_null($events['events'])) {
 				}
 			}
 
-			if($found == 0){
+			if($found !== 0){
 				$text = 'ช้อนไม่เข้าใจ ช้อน SO VERY กระจอก';
+			
+
+				//$text = $event['message']['text'];
+
+					// Get replyToken
+				$replyToken = $event['replyToken'];
+
+				// Build message to reply back
+				$messages = [
+					'type' => 'text',
+					'text' => $text
+				];
+
+				// Make a POST Request to Messaging API to reply to sender
+				$url = 'https://api.line.me/v2/bot/message/reply';
+				$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages],
+				];
+				$post = json_encode($data);
+				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+				
+				$ch = curl_init($url);
+				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+				$result = curl_exec($ch);
+				curl_close($ch);
+				echo $result . "\r\n";
+
 			}
-
-			//$text = $event['message']['text'];
-
-				// Get replyToken
-			$replyToken = $event['replyToken'];
-
-			// Build message to reply back
-			$messages = [
-				'type' => 'text',
-				'text' => $text
-			];
-
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-            
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
-			curl_close($ch);
-			echo $result . "\r\n";
 		}
 	}
 }
