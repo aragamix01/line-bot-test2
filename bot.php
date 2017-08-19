@@ -59,7 +59,7 @@ if (!is_null($events['events'])) {
 			}
 
 			if($found !== 0){
-				$text = 'ช้อนไม่เข้าใจ ช้อน SO VERY กระจอก';
+				//$text = 'ช้อนไม่เข้าใจ ช้อน SO VERY กระจอก';
 			
 
 				//$text = $event['message']['text'];
