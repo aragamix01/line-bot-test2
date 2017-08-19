@@ -10,7 +10,8 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text' 
+			|| $event['type'] == 'join') {
 			// Get text sent
 			
 			
@@ -58,7 +59,11 @@ if (!is_null($events['events'])) {
 				}
 			}
 
-			if($found !== 0){
+			if($event['type'] == 'join'){
+				$text = "ทุกๆคนที่เข้ามาใหม่ เมื่อเข้ามาแล้วให้ทำดังนี้นะคะ \n 1.) แนะนำตัวเอง \n 2.) ประทับใจอะไรใน bnk48 \n แล้วอดใจรอซักครู่นะคะ 😳";
+			}
+
+			if($found !== 0 || $event['type'] == 'join'){
 				//$text = 'ช้อนไม่เข้าใจ ช้อน SO VERY กระจอก';
 			
 
@@ -95,6 +100,7 @@ if (!is_null($events['events'])) {
 			}
 		}
 	}
+	
 }
 echo "OK";
 ?>
