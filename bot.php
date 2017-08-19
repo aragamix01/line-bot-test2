@@ -17,7 +17,6 @@ if (!is_null($events['events'])) {
 		if ( ($event['type'] == 'message' && $event['message']['type'] == 'text' ) || $join == 1) {
 			// Get text sent
 			
-			
 			$question = [
 				0 => [
 					'keywords' => 'สี',
@@ -25,7 +24,7 @@ if (!is_null($events['events'])) {
 				],
 				1 => [
 					'keywords' => 'จังหวัด',
-					'ans' => 'สิงค์บุรี'
+					'ans' => 'สิงห์บุรี'
 				],
 				2 => [
 					'keywords' => 'พก',
@@ -37,11 +36,11 @@ if (!is_null($events['events'])) {
 				],
 				4 => [
 					'keywords' => 'ฉายา',
-					'ans' => 'เชเช่,ดอรี่,เซ้นต์แจน'
+					'ans' => 'เชเช่,ดอรี่,เซนต์แจน'
 				],
 				5 => [
-					'keywords' => 'เทศการ',
-					'ans' => 'คริสมาสต์'
+					'keywords' => 'เทศกาล',
+					'ans' => 'คริสต์มาส'
 				],
 				6 => [
 					'keywords' => 'ช้อน',
