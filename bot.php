@@ -15,7 +15,7 @@ if (!is_null($events['events'])) {
 			$text = "ทุกๆคนที่เข้ามาใหม่ เมื่อเข้ามาแล้วให้ทำดังนี้นะคะ \n 1.) แนะนำตัวเอง \n 2.) ประทับใจอะไรใน bnk48 \n แล้วอดใจรอซักครู่นะคะ";
 			$join = 1;
 		}
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text' ) {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text' || $join == 1) {
 			// Get text sent
 			
 			
