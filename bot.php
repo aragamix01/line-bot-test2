@@ -55,7 +55,7 @@ if (!is_null($events['events'])) {
 			];
 
 			$found = 0;
-
+			$join = 1;
 			if($join == 0){
 				foreach ( $question as $row ){
 					if( strpos($event['message']['text'],$row['keywords']) !== false ){
@@ -65,8 +65,7 @@ if (!is_null($events['events'])) {
 					}
 				}
 			}
-
-			$join = 1;
+			
 
 			if($found !== 0 || $join == 1){
 				//$text = 'ช้อนไม่เข้าใจ ช้อน SO VERY กระจอก';
