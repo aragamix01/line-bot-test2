@@ -12,7 +12,7 @@
 
     echo $question;
 
-    // foreach(json_encode($question) as $row){
-    //     echo $row->ans;
-    // }
+    foreach($question as $row){
+         echo $row['ans'];
+    }
 ?>
