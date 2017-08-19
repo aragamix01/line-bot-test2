@@ -16,10 +16,10 @@ if (!is_null($events['events'])) {
 			
 			$question = [
 				'keywords' => 'สี',
-				'ans' => 'สีเหลือง';
+				'ans' => 'สีเหลือง'
 			]
 
-			if(strpos($event['message']['text'],$question['keywords']) == false){
+			if(strpos($event['message']['text'],$question['keywords']) !== false){
 				$text = $question['ans'];
 			}else{
 				$text = $event['message']['text'];
