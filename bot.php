@@ -14,17 +14,17 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			
 			
-			// $question = [
-			// 	'keywords' => 'สี',
-			// 	'ans' => 'สีเหลือง'
-			// ]
+			$question = [
+				'keywords' => 'สี',
+				'ans' => 'สีเหลือง'
+			];
 
-			// if( strpos($event['message']['text'],$question['keywords']) !== false ){
-			// 	$text = $question['ans'];
-			// }else{
-			// 	$text = $event['message']['text'];
-			// }
-			$text = $event['message']['text'];
+			if( strpos($event['message']['text'],$question['keywords']) !== false ){
+				$text = $question['ans'];
+			}else{
+				$text = $event['message']['text'];
+			}
+			//$text = $event['message']['text'];
 
 				// Get replyToken
 			$replyToken = $event['replyToken'];
