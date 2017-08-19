@@ -56,6 +56,7 @@ if (!is_null($events['events'])) {
 
 			$found = 0;
 			$join = 1;
+			$text = "ทุกๆคนที่เข้ามาใหม่ เมื่อเข้ามาแล้วให้ทำดังนี้นะคะ \n 1.) แนะนำตัวเอง \n 2.) ประทับใจอะไรใน bnk48 \n แล้วอดใจรอซักครู่นะคะ";
 			if($join == 0){
 				foreach ( $question as $row ){
 					if( strpos($event['message']['text'],$row['keywords']) !== false ){
