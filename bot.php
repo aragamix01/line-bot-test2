@@ -73,6 +73,14 @@ if (!is_null($events['events'])) {
 				13 => [
 					'keywords' => 'แก้ว',
 					'ans' => 'ปาป้า ของเชเช่'
+				],
+				14 => [
+					'keywords' => 'กลับ',
+					'ans' => 'GO HOME VERY GOOD'
+				],
+				15 => [
+					'keywords' => 'ไหม',
+					'ans' => 'ช้อนขอไม่ตอบได้ป่ะ'
 				]
 				
 			];
