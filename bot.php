@@ -14,10 +14,10 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			
 			
-			$question = [
-				'keywords' => 'สี',
-				'ans' => 'สีเหลือง'
-			]
+			// $question = [
+			// 	'keywords' => 'สี',
+			// 	'ans' => 'สีเหลือง'
+			// ]
 
 			// if( strpos($event['message']['text'],$question['keywords']) !== false ){
 			// 	$text = $question['ans'];
