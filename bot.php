@@ -10,8 +10,12 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text' 
-			|| $event['type'] == 'join') {
+		$join = 0;
+		if ($event['type'] == 'join'){
+			$text = "ทุกๆคนที่เข้ามาใหม่ เมื่อเข้ามาแล้วให้ทำดังนี้นะคะ \n 1.) แนะนำตัวเอง \n 2.) ประทับใจอะไรใน bnk48 \n แล้วอดใจรอซักครู่นะคะ 😳";
+			$join = 1;
+		}
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text' ) {
 			// Get text sent
 			
 			
@@ -51,19 +55,20 @@ if (!is_null($events['events'])) {
 			];
 
 			$found = 0;
-			foreach ( $question as $row ){
-				if( strpos($event['message']['text'],$row['keywords']) !== false ){
-					$text = $row['ans'];
-					$found = 1;
-					break;
+
+			if($join == 0){
+				foreach ( $question as $row ){
+					if( strpos($event['message']['text'],$row['keywords']) !== false ){
+						$text = $row['ans'];
+						$found = 1;
+						break;
+					}
 				}
 			}
 
-			if($event['type'] == 'join'){
-				$text = "ทุกๆคนที่เข้ามาใหม่ เมื่อเข้ามาแล้วให้ทำดังนี้นะคะ \n 1.) แนะนำตัวเอง \n 2.) ประทับใจอะไรใน bnk48 \n แล้วอดใจรอซักครู่นะคะ 😳";
-			}
+			
 
-			if($found !== 0 || $event['type'] == 'join'){
+			if($found !== 0 || $join == 1){
 				//$text = 'ช้อนไม่เข้าใจ ช้อน SO VERY กระจอก';
 			
 
