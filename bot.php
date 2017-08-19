@@ -12,10 +12,19 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = $event['message']['text'];
-            //$scr = $event['source'];
-           //$text = $scr['groupId'];
-			// Get replyToken
+			
+			
+			$question = [
+				'keywords' => 'สี',
+				'ans' => 'สีเหลือง';
+			]
+
+			if(strpos($event['message']['text'],$question['keywords']) == false){
+				$text = $question['ans'];
+			}else{
+				$text = $event['message']['text'];
+			}
+				// Get replyToken
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
