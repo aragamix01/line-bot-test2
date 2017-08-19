@@ -12,7 +12,6 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		$join = 0;
 		if ($event['type'] == 'join'){
-			$text = "ทุกๆคนที่เข้ามาใหม่ เมื่อเข้ามาแล้วให้ทำดังนี้นะคะ \n 1.) แนะนำตัวเอง \n 2.) ประทับใจอะไรใน bnk48 \n แล้วอดใจรอซักครู่นะคะ";
 			$join = 1;
 		}
 		if ( ($event['type'] == 'message' && $event['message']['type'] == 'text' ) || $join == 1) {
@@ -63,6 +62,8 @@ if (!is_null($events['events'])) {
 						break;
 					}
 				}
+			}else{
+				$text = "ทุกๆคนที่เข้ามาใหม่ เมื่อเข้ามาแล้วให้ทำดังนี้นะคะ \n 1.) แนะนำตัวเอง \n 2.) ประทับใจอะไรใน bnk48 \n แล้วอดใจรอซักครู่นะคะ";	
 			}
 			
 
