@@ -10,8 +10,6 @@
         ]
     ];
 
-    echo $question;
-
     foreach($question as $row){
          echo $row['ans'];
     }

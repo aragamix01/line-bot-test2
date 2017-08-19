@@ -15,15 +15,45 @@ if (!is_null($events['events'])) {
 			
 			
 			$question = [
-				'keywords' => 'สี',
-				'ans' => 'สีเหลือง'
+				0 => [
+					'keywords' => 'สี',
+					'ans' => 'สีเหลือง'
+				],
+				1 => [
+					'keywords' => 'จังหวัด',
+					'ans' => 'สิงค์บุรี'
+				],
+				2 => [
+					'keywords' => 'พก',
+					'ans' => 'ช้อน'
+				],
+				3 => [
+					'keywords' => 'ทำผิด',
+					'ans' => 'เค้าขอโทดดด'
+				],
+				4 => [
+					'keywords' => 'ฉายา',
+					'ans' => 'เชเช่,ดอรี่,เซ้นต์แจน'
+				],
+				5 => [
+					'keywords' => 'เทศการ',
+					'ans' => 'คริสมาสต์'
+				]
 			];
 
-			if( strpos($event['message']['text'],$question['keywords']) !== false ){
-				$text = $question['ans'];
-			}else{
-				$text = $event['message']['text'];
+			$found = 0;
+			foreach ( $question as $row ){
+				if( strpos($event['message']['text'],$row['keywords']) !== false ){
+					$text = $row['ans'];
+					$found = 1;
+					break;
+				}
 			}
+
+			if($found == 0){
+				$text = 'ช้อนไม่เข้าใจ ช้อน SO VERY กระจอก';
+			}
+
 			//$text = $event['message']['text'];
 
 				// Get replyToken
