@@ -10,5 +10,9 @@
         ]
     ];
 
-    echo json_encode($question);
+    echo $question;
+
+    // foreach(json_encode($question) as $row){
+    //     echo $row->ans;
+    // }
 ?>
