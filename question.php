@@ -3,4 +3,6 @@
         'keywords' => 'สี',
         'ans' => 'สีเหลือง'
     ];
+
+    echo json_encode($question);
 ?>
