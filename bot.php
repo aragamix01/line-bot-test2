@@ -1,6 +1,6 @@
 <?php
 $access_token = '5fUwVGVAEzh0STff4waRo1361kbdfS306CJ+pVaO9+T7dXfrSLum6m0nAWpDx3hOKBVKPiebT7tVDcwT3MPSZYKiKYX0M2RSAgpDu2pFnjHw4YziX8CTgyyqZcgT39OjtOc+OatIxAfp/J+d/YTNRQdB04t89/1O/w1cDnyilFU=';
-
+$roomToken = 'C9ac0d8c426f5f88e9609cc2f5d8a23b8';
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -55,8 +55,6 @@ if (!is_null($events['events'])) {
 			];
 
 			$found = 0;
-			$join = 1;
-			$text = "ทุกๆคนที่เข้ามาใหม่ เมื่อเข้ามาแล้วให้ทำดังนี้นะคะ \n 1.) แนะนำตัวเอง \n 2.) ประทับใจอะไรใน bnk48 \n แล้วอดใจรอซักครู่นะคะ";
 			if($join == 0){
 				foreach ( $question as $row ){
 					if( strpos($event['message']['text'],$row['keywords']) !== false ){
@@ -90,7 +88,7 @@ if (!is_null($events['events'])) {
 					'messages' => [$messages],
 				];
 				$post = json_encode($data);
-				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $roomToken);
 				
 				$ch = curl_init($url);
 				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
