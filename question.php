@@ -1,7 +1,9 @@
 <?php
     $question = [
-        'keywords' => 'สี',
-        'ans' => 'สีเหลือง'
+        0 = > [
+            'keywords' => 'สี',
+            'ans' => 'สีเหลือง'
+        ] 
     ];
 
     echo json_encode($question);
