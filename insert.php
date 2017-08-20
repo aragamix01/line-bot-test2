@@ -1,8 +1,3 @@
-<form action="testConnection.php" method="POST">
-    <input type="text" name="key">
-    <input type="text" name="ans">
-    <input type="submit" name="submit" value="submit">
-</form>
 <?php 
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
     
