@@ -18,7 +18,7 @@
             while ($obj = $result->fetch_object()) {
                 echo '<tr>';
                     echo '<td>'.$obj->key.'</td><td>'.$obj->ans."</td>";
-                    echo '<a href="#" >del</a>';
+                    echo '<td><a href="#" >del</a></td>';
                 echo '</tr>';
             }
         echo '</table>';
