@@ -43,8 +43,8 @@ if (!is_null($events['events'])) {
                             $c_status = 1;
                             $text = "ช้อนคนดีคนเดิมกลับมาแล้ว";
                         }
-                        $sql_status = "UPDATE `heroku_da1dc32cdc85254`.`status` SET `sta` = $c_status WHERE `staId` = 1";
-                        $conn->query($sql_status);
+                        // $sql_status = "UPDATE `heroku_da1dc32cdc85254`.`status` SET `sta` = $c_status WHERE `staId` = 1";
+                        // $conn->query($sql_status);
             }else{
                 
                 $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
