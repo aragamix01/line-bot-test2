@@ -36,19 +36,19 @@ if (!is_null($events['events'])) {
                 $text = "ช้อนรู้แล้วว";
                 $msg_status = 1;
             }else{
-                // $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
-                // if ($result = $conn->query($sql_select)) {
+                $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
+                if ($result = $conn->query($sql_select)) {
                     
-                //         while ($obj = $result->fetch_object()) {
-                //             if( strpos($event['message']['text'],$obj['key']) !== false ){
-                //                 $text = $obj['ans'];
-                //                 break;
-                //             }
-                //         }
+                        while ($obj = $result->fetch_object()) {
+                            if( strpos($event['message']['text'],$obj->key) !== false ){
+                                $text = $obj->ans;
+                                break;
+                            }
+                        }
                     
-                //         $result->close();
-                // }
-                $text = $event['message']['text'];
+                        $result->close();
+                }
+                //$text = $event['message']['text'];
             }
 
             $replyToken = $event['replyToken'];
