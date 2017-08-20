@@ -8,7 +8,7 @@ $db = substr($url["path"], 1);
 
 
     if($conn = new mysqli($server, $username, $password, $db)){
-        echo true;
+        echo $server.' '.$username.' '.$password.' '.$db;
     }else{
         echo false;
     }
