@@ -23,6 +23,7 @@ $db = substr($url["path"], 1);
         while ($row = mysql_fetch_array($qu, MYSQL_ASSOC)) {
             printf("Key: %s  Ans: %s", $row["key"], $row["ans"]);
         }
+        echo 'success';
     }else{
         echo 'failed';
     }
