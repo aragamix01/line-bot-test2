@@ -23,7 +23,7 @@
             while ($obj = $result->fetch_object()) {
                 echo '<tr>';
                     echo '<td>'.$obj->key.'</td><td>'.$obj->ans."</td>";
-                    echo '<button></button>';
+                    echo '<td><button>del</button></td>';
                 echo '</tr>';
             }
         echo '</table>';
