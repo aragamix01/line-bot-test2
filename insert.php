@@ -27,7 +27,7 @@
 
     $sql = "SELECT * FROM `heroku_da1dc32cdc85254`.`status` WHERE staId = 1";
     $qu = conn->query($sql);
-
+    $qu = $qu->fetch_object();
     echo $qu->sta;
     
 ?>
