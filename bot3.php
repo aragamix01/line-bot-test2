@@ -35,9 +35,8 @@ if (!is_null($events['events'])) {
 
                 $text = "ช้อนรู้แล้วว";
                 $msg_status = 1;
-            }else if(strpos($event['message']['text'],"c_sleep") !== false 
-                        || strpos($event['message']['text'],"c_wake") !== false)){
-                        if(strpos($event['message']['text'],"c_sleep") !== false){
+            }else if(strcmp($event['message']['text'],"c_sleep") !== false || strcmp($event['message']['text'],"c_wake") !== false)){
+                        if(strcmp($event['message']['text'],"c_sleep") !== false){
                             $c_status = 0;
                             $text = "ช้อนง่วงช้อนขอนอนก่อนนะ";
                         }else{
@@ -47,6 +46,7 @@ if (!is_null($events['events'])) {
                         $sql_status = "UPDATE `heroku_da1dc32cdc85254`.`status` SET `sta` = $c_status WHERE `staId` = 1";
                         $conn->query($sql_status);
             }else{
+                
                 $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
                 if ($result = $conn->query($sql_select)) {
                     
