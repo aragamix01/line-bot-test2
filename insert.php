@@ -21,10 +21,9 @@
     if ($result = $conn->query($sql_select)) {
         
             while ($obj = $result->fetch_object()) {
-                echo $obj->key."<br>".$obj->ans;
+                echo $obj->key." ".$obj->ans."<br>".;
             }
         
-            /* free result set */
             $result->close();
     }
     
