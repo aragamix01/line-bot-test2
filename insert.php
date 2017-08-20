@@ -17,8 +17,6 @@
     
     $qu = $conn->query("select * from heroku_da1dc32cdc85254.knowledge");
     print_r($qu);
-
-    while ($obj = $qu->fetch_object()) {
-        printf ("%s (%s)\n", $obj->key, $obj->ans);
-    }
+    echo gettype($qu);
+    
 ?>
