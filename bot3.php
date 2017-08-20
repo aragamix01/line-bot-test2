@@ -35,6 +35,17 @@ if (!is_null($events['events'])) {
 
                 $text = "ช้อนรู้แล้วว";
                 $msg_status = 1;
+            }else if(strpos($event['message']['text'],"c_sleep") !== false 
+                        || strpos($event['message']['text'],"c_wake") !== false)){
+                        if(strpos($event['message']['text'],"c_sleep") !== false){
+                            $c_status = 0;
+                            $text = "ช้อนง่วงช้อนขอนอนก่อนนะ";
+                        }else{
+                            $c_status = 1;
+                            $text = "ช้อนคนดีคนเดิมกลับมาแล้ว";
+                        }
+                        $sql_status = "UPDATE `heroku_da1dc32cdc85254`.`status` SET `sta` = $c_status WHERE `staId` = 1";
+                        $conn->query($sql_status);
             }else{
                 $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
                 if ($result = $conn->query($sql_select)) {
