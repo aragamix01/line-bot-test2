@@ -15,7 +15,7 @@ $db = substr($url["path"], 1);
     
     if($conn->query($sql)){
         echo 'success';
-        header('Location: '.insert.php);
+        header('Location: '.'insert.php');
     }else{
         echo 'failed';
     }
