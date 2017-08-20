@@ -19,11 +19,13 @@
     
     $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
     if ($result = $conn->query($sql_select)) {
-        
+        echo '<table>';
             while ($obj = $result->fetch_object()) {
-                echo $obj->key." ".$obj->ans."<br>";
+                echo '<tr>';
+                    echo '<td>'.$obj->key.'</td><td>'.$obj->ans."</td>";
+                echo '</tr>';
             }
-        
+        echo '</table>';
             $result->close();
     }
 
