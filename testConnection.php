@@ -16,13 +16,7 @@ $db = substr($url["path"], 1);
     if($conn->query($sql)){
         echo 'success';
         $qu = $conn->query("select * from heroku_da1dc32cdc85254.knowledge");
-        
-        $data = array();
-        $data = array mysqli_fetch_assoc($qu);
-
-        print_r($data);
-
-        echo 'success';
+        echo 'Current PHP version: ' . phpversion();
     }else{
         echo 'failed';
     }
