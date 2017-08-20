@@ -36,7 +36,16 @@ if (!is_null($events['events'])) {
                 $text = "ช้อนรู้แล้วว";
                 $msg_status = 1;
             }else if( strcmp($event['message']['text'],"c_sleep") == false || strcmp($event['message']['text'],"c_wake") == false){
-                $text = "c_status";
+                    $c_status = 0;
+                        if(strcmp($event['message']['text'],"c_sleep") == false){
+                            $c_status = 0;
+                            $text = "ช้อนง่วงแล้วช้อนไปก่อนนะzZ";
+                        }else{
+                            $c_status = 1;
+                            $text = "ช้อนคนดีคนเดิมมาแล้วจ้าาา..";
+                        }
+                
+                $msg_status = 2;
             }else{
                 
                 $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
