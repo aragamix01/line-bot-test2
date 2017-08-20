@@ -9,6 +9,10 @@
     
     $conn = new mysqli($server, $username, $password, $db);
 
-    echo $_GET['id'];
+    $knId = $_GET['id'];
 
+    $sql = "DELETE FROM `heroku_da1dc32cdc85254`.`knowledge` WHERE knId = $knId";
+    $conn->query($sql);
+
+    header('Location: '."insert.php");
 ?>
