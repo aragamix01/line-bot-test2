@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
             $msg_status = 0; //0 = normal_message,1 = train_message,2 = power_message
             if(strpos($event['message']['text'],"#?") !== false ){
                 $temp = $event['message']['text'];
-                $temp = $explode('#?',$temp);
+                $temp = explode('#?',$temp);
 
                 $key = $temp[0];
                 $ans = $temp[1];
