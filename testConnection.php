@@ -17,12 +17,10 @@ $db = substr($url["path"], 1);
         echo 'success';
         $qu = $conn->query("select * from heroku_da1dc32cdc85254.knowledge");
         
-        $type_array = array();    
-        while($row = mysql_fetch_assoc($qu)) {
-            $type_array[] = $row['ans'];
-        }
+        $data = array();
+        $data = array mysqli_fetch_assoc($qu);
 
-        print_r($type_array);
+        print_r($data);
 
         echo 'success';
     }else{
