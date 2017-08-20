@@ -45,9 +45,6 @@ if (!is_null($events['events'])) {
                             $text = "ช้อนคนดีคนเดิมมาแล้วจ้าาา..";
                         }
 
-                        $sql_status = "UPDATE `heroku_da1dc32cdc85254`.`status` SET `sta` = $c_status WHERE `staId` = 1";
-                        $conn->query($sql_status);
-
                         $sql_status = "SELECT * FROM `heroku_da1dc32cdc85254`.`status` WHERE staId = 1";
                         if ($result = $conn->query($sql_status)) {
                             
