@@ -17,4 +17,8 @@
     
     $qu = $conn->query("select * from heroku_da1dc32cdc85254.knowledge");
     print_r($qu);
+
+    while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+        printf("ID: %s  Name: %s", $row["ans"], $row["key"]);
+    }
 ?>
