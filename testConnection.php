@@ -16,9 +16,9 @@ $db = substr($url["path"], 1);
     if($conn->query($sql)){
         echo 'success';
         $qu = $conn->query("select * from heroku_da1dc32cdc85254.knowledge");
-        while ($row = mysql_fetch_assoc($qu)) {
-            echo 1;
-        }
+        while ($row = mysql_fetch_assoc($qu)){  
+            echo $row['ans'];  
+        } 
     }else{
         echo 'failed';
     }
