@@ -35,6 +35,8 @@ if (!is_null($events['events'])) {
 
                 $text = "ช้อนรู้แล้วว";
                 $msg_status = 1;
+            }else if( strcmp($event['message']['text'],"c_sleep") !== false || strcmp($event['message']['text'],"c_wake") !== false){
+                $text = "c_status";
             }else{
                 
                 $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
