@@ -17,12 +17,11 @@
   
     
     
-    
-    if ($result = $conn->query("select * from heroku_da1dc32cdc85254.knowledge")) {
+    $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
+    if ($result = $conn->query($sql_select)) {
         
-            /* fetch object array */
             while ($obj = $result->fetch_object()) {
-                printf ("%s (%s)\n", $obj->key, $obj->ans);
+                echo $obj->key."\n".$obj->ans;
             }
         
             /* free result set */
