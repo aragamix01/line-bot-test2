@@ -56,6 +56,5 @@ if (!is_null($events['events'])) {
     }
 }
 
-$conn->close();
 echo "OK";
 ?>
