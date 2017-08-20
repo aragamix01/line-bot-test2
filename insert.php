@@ -25,7 +25,9 @@
         $result->close();
     }
 
-    $text = explode("#?",$text);
-    echo $text[0].' '.$text[1];
+    $sql = "SELECT * FROM `heroku_da1dc32cdc85254`.`status` WHERE staId = 1";
+    $qu = conn->query($sql);
+
+    echo $qu->sta;
     
 ?>
