@@ -9,6 +9,6 @@
     
     $conn = new mysqli($server, $username, $password, $db);
 
-    echo $_GET['knId'];
+    echo $_GET['id'];
 
 ?>
