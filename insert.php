@@ -25,11 +25,6 @@
         $result->close();
     }
 
-    $sql_status = "select * from heroku_da1dc32cdc85254.knowledge";
-    $result = $conn->query($sql_status);
-
-    echo $result;
-
     $text = explode("#?",$text);
     echo $text[0].' '.$text[1];
     

@@ -44,6 +44,9 @@ if (!is_null($events['events'])) {
                             $c_status = 1;
                             $text = "ช้อนคนดีคนเดิมมาแล้วจ้าาา..";
                         }
+
+                        $sql_status = "UPDATE `heroku_da1dc32cdc85254`.`status` SET `sta` = $c_status WHERE `staId` = 1";
+                        $conn->query($sql_status);
                 
                 $msg_status = 2;
             }else{
