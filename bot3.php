@@ -47,7 +47,17 @@ if (!is_null($events['events'])) {
 
                         $sql_status = "UPDATE `heroku_da1dc32cdc85254`.`status` SET `sta` = $c_status WHERE `staId` = 1";
                         $conn->query($sql_status);
-                
+
+                        $sql_status = "SELECT * FROM `heroku_da1dc32cdc85254`.`status` WHERE staId = 1";
+                        if ($result = $conn->query($sql_status)) {
+                            
+                                while ($obj = $result->fetch_object()) {
+                                    $check_status = $obj->sta;
+                                }
+                            
+                                $result->close();
+                        }
+
                 $msg_status = 2;
             }else{
                 
@@ -87,7 +97,9 @@ if (!is_null($events['events'])) {
             curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            $result = curl_exec($ch);
+            if($check_status){
+                $result = curl_exec($ch);
+            }
             curl_close($ch);
             echo $result . "\r\n";
         }
