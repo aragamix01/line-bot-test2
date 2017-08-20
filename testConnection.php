@@ -16,13 +16,12 @@ $db = substr($url["path"], 1);
     if($conn->query($sql)){
         echo 'success';
         $qu = $conn->query("select * from heroku_da1dc32cdc85254.knowledge");
-      
-        // echo type_of($qu);
+        
+        while ($row = mysql_fetch_assoc($qu)) {
+            echo $row["key"];
+            echo $row["ans"];
+        }
 
-        // //print_r($qu);
-        // while ($row = mysql_fetch_array($qu, MYSQL_ASSOC)) {
-        //     printf("Key: %s  Ans: %s", $row["key"], $row["ans"]);
-        // }
         echo 'success';
     }else{
         echo 'failed';
