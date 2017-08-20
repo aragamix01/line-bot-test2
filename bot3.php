@@ -24,6 +24,15 @@ if (!is_null($events['events'])) {
         if ( $event['type'] == 'message' && $event['message']['type'] == 'text' ){
             $msg_status = 0; //0 = normal_message,1 = train_message,2 = power_message
             if(strpos($event['message']['text'],"#?") !== false ){
+                $temp = $event['message']['text'];
+                $temp = $explode('#?',$temp);
+
+                $key = $temp[0];
+                $ans = $temp[1];
+                $sql = "INSERT INTO `heroku_da1dc32cdc85254`.`knowledge`(`key`,`ans`) VALUES ('$key','$ans')";
+
+                $conn->query($sql);
+
                 $text = "ช้อนรู้แล้วว";
                 $msg_status = 1;
             }
