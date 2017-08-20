@@ -29,6 +29,6 @@
 
     $text = "ASD#?XCD";
     $text = explode($text,"#?");
-    echo $text[0].' '.$text[1];
+    echo $text[0];
     
 ?>
