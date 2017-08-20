@@ -8,10 +8,11 @@ $db = substr($url["path"], 1);
 
 
 $conn = new mysqli($server, $username, $password, $db);
-this->testFnc();
 
 function testFnc(){
     echo 'eiei';
 }
+
+testFnc();
 
 ?>
