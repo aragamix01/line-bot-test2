@@ -4,13 +4,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <input type="text" class="form-control">
-                </div>
-            </div>
-        </div>
+        <a href="#" role="button" class="btn btn-danger">del</a>
     </body>
 </html>
 <?php 
