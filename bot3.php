@@ -78,14 +78,14 @@ if (!is_null($events['events'])) {
                     'type' => 'image',
                     'originalContentUrl': $imageUrl,
                     'previewImageUrl': $imageMiniUrl
-                ]
+                ];
             }else{
                 $messages = [
                     'type' => 'text',
                     'text' => $text
                 ];
             }
-            
+
             $url = 'https://api.line.me/v2/bot/message/reply';
             $data = [
                 'replyToken' => $replyToken,
