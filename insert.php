@@ -29,10 +29,10 @@
     
     $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
     if ($result = $conn->query($sql_select)) {
-        echo '<table border="1">';
+        echo '<table class="table">';
             while ($obj = $result->fetch_object()) {
                 echo '<tr>';
-                    echo '<td><a href="delete.php?id='.$obj->knId.'" >del</a></td>';
+                    echo '<td><a href="delete.php?id='.$obj->knId.'" role="button" class="btn btn-danger">del</a></td>';
                     echo '<td>'.$obj->key.'</td><td>'.$obj->ans."</td>";
                 echo '</tr>';
             }
