@@ -27,7 +27,7 @@
     if ($result = $conn->query($sql_select)) {
         echo '<table class="table-bordered">';
         echo '<thead>';
-        echo '<tr> <th>Delete</th> <th>Keywords</th> <th>Answers</th> </tr>'
+        echo '<tr> <th>Delete</th> <th>Keywords</th> <th>Answers</th> </tr>';
         echo '</thead><tbody>';
             while ($obj = $result->fetch_object()) {
                 echo '<tr>';
