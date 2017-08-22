@@ -49,6 +49,7 @@ if (!is_null($events['events'])) {
                             $text = "ช้อนคนดีคนเดิมมาแล้วจ้าาา..";
                             $msg_status = 2;
                         }else{
+                            $c_status = 1;
                             $msg_status = 3;
                         }
 
