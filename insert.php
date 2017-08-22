@@ -26,6 +26,7 @@
     $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
     if ($result = $conn->query($sql_select)) {
         echo '<table class="table">';
+        echo '<th><td>Delete</td><td>Keywords</td><td>Answers</td></th>';
             while ($obj = $result->fetch_object()) {
                 echo '<tr>';
                     echo '<td><a href="delete.php?id='.$obj->knId.'" role="button" class="btn btn-danger">del</a></td>';
