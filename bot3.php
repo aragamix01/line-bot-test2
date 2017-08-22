@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
                         if(strcmp($event['message']['text'],"c_sleep") == false){
                             $c_status = 0;
                             $text = "ช้อนง่วงแล้วช้อนไปก่อนนะzZ";
-                        }else if(strcmp($event['message']['text'],"c_wake") == false){
+                        }else if(strcmp( $event['message']['text'],"c_wake") == false ){
                             $c_status = 1;
                             $text = "ช้อนคนดีคนเดิมมาแล้วจ้าาา..";
                         }else{
@@ -76,8 +76,8 @@ if (!is_null($events['events'])) {
             if($msg_status == 3){
                 $messages = [
                     'type' => 'image',
-                    'originalContentUrl': $imageUrl,
-                    'previewImageUrl': $imageMiniUrl
+                    'originalContentUrl' => $imageUrl,
+                    'previewImageUrl' => $imageMiniUrl
                 ];
             }else{
                 $messages = [
