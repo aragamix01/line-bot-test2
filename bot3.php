@@ -15,9 +15,9 @@ if($conn = new mysqli($server, $username, $password, $db)){
 
 $access_token = '5fUwVGVAEzh0STff4waRo1361kbdfS306CJ+pVaO9+T7dXfrSLum6m0nAWpDx3hOKBVKPiebT7tVDcwT3MPSZYKiKYX0M2RSAgpDu2pFnjHw4YziX8CTgyyqZcgT39OjtOc+OatIxAfp/J+d/YTNRQdB04t89/1O/w1cDnyilFU=';
 $roomToken = 'C9ac0d8c426f5f88e9609cc2f5d8a23b8';
-$imageUrl = 'https://still-beyond-73841.herokuapp.com/bnk48_2.jpg';
+$imageUrl = 'https://still-beyond-73841.herokuapp.com/bnk48_3.jpg';
 //$imageMiniUrl = 'https://still-beyond-73841.herokuapp.com/bnk48_mini.jpg';
-$imageMiniUrl = 'https://still-beyond-73841.herokuapp.com/rsz_1bnk48_2.jpg';
+$imageMiniUrl = 'https://still-beyond-73841.herokuapp.com/rsz_1bnk48_3.jpg';
 
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
