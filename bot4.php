@@ -15,6 +15,7 @@
             if($event['type'] == 'message' && $event['message']['type'] == 'text' ){
 
                 $replyToken = $event['replyToken'];
+                $text = $event['message']['text'];
                 $messages = [
                     'type' => 'text',
                     'text' => $text
