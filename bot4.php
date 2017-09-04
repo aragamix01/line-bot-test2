@@ -26,6 +26,20 @@
                 }else if(strcmp($event['message']['text'],"รายชื่อ") == false){
                     $data = setData(0,$event['replyToken']);
                     sendMessage($data,$access_token);
+                }else{
+                    $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
+                    if ($result = $conn->query($sql_select)) {
+                        
+                            while ($obj = $result->fetch_object()) {
+                                if( strpos($event['message']['text'],$obj->key) !== false ){
+                                    $text = $obj->ans;
+                                    break;
+                                }
+                            }
+                            $result->close();
+                    }
+                    $data = setData(1,$event['replyToken'],$text);
+                    sendMessage($data,$access_token);
                 }
             }
         }
