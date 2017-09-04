@@ -22,7 +22,7 @@
 
     function setData($isText,$reply,$text=""){
 
-        if($isText = 1){
+        if($isText == 1){
             $messages = [
                 'type' => 'text',
                 'text' => $text
