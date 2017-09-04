@@ -20,6 +20,22 @@
         $conn->close();
     }
 
+    function setData($isText,$reply,$text){
+
+        if($isText = 1){
+            $messages = [
+                'type' => 'text',
+                'text' => $text
+            ];
+            $replyToken = $event['replyToken'];
+            $data = [
+                'replyToken' => $reply,
+                'messages' => [$messages],
+             ];
+        }
+        return $data;
+    }
+
     function sendMessage($data,$access_token){
         $url = 'https://api.line.me/v2/bot/message/reply';
         $post = json_encode($data);

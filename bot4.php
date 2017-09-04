@@ -22,16 +22,8 @@
                     $sql = "INSERT INTO `heroku_da1dc32cdc85254`.`knowledge`(`key`,`ans`) VALUES ('$key','$ans')";
     
                     $conn->query($sql);
-
-                    $text = 'รู้แล้วจะสอนทำไมเยอะแยะ ช้อนไม่ได้แก่แบบเช่นะ';
-                    $messages = [
-                        'type' => 'text',
-                        'text' => $text
-                    ];
-                    $data = [
-                        'replyToken' => $replyToken,
-                        'messages' => [$messages],
-                     ];
+                    $text = 'ช้อนรู้แล้ว ช้อนไม่ได้แก่แบบเช่นะที่จะจำไม่ได้อ่ะ';
+                    $data = setData(1,$event['replyToken'],$text);
                     sendMessage($data,$access_token);
                 }
             }
