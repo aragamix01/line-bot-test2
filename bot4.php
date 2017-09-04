@@ -13,18 +13,26 @@
     if (!is_null($events['events'])) {
         foreach ($events['events'] as $event) {
             if($event['type'] == 'message' && $event['message']['type'] == 'text' ){
+                if(strpos($event['message']['text'],"#?") !== false ){
+                    $temp = $event['message']['text'];
+                    $temp = explode('#?',$temp);
+    
+                    $key = $temp[0];
+                    $ans = $temp[1];
+                    $sql = "INSERT INTO `heroku_da1dc32cdc85254`.`knowledge`(`key`,`ans`) VALUES ('$key','$ans')";
+    
+                    $conn->query($sql);
 
-                $replyToken = $event['replyToken'];
-                $text = $event['message']['text'];
-                $messages = [
-                    'type' => 'text',
-                    'text' => $text
-                ];
-                $data = [
-                    'replyToken' => $replyToken,
-                    'messages' => [$messages],
-                ];
-                sendMessage($data,$access_token);
+                    $messages = [
+                        'type' => 'text',
+                        'text' => 'รู้แล้วจะสอนทำไมเยอะแยะ ช้อนไม่ได้แก่แบบเช่นะ'
+                    ];
+                    $data = [
+                        'replyToken' => $replyToken,
+                        'messages' => [$messages],
+                     ];
+                    sendMessage($data,$access_token);
+                }
             }
         }
     }
