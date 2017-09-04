@@ -13,5 +13,10 @@
         }else{
             echo false;
         }
+        return $conn;
+    }
+
+    function closeConnection($conn){
+        $conn->close();
     }
 ?>
