@@ -20,19 +20,28 @@
         $conn->close();
     }
 
-    function setData($isText,$reply,$text){
+    function setData($isText,$reply,$text=""){
 
         if($isText = 1){
             $messages = [
                 'type' => 'text',
                 'text' => $text
             ];
-            $replyToken = $event['replyToken'];
-            $data = [
-                'replyToken' => $reply,
-                'messages' => [$messages],
-             ];
+        }else{
+            $imageUrl = 'https://still-beyond-73841.herokuapp.com/bnk48_3.jpg';
+            $imageMiniUrl = 'https://still-beyond-73841.herokuapp.com/rsz_1bnk48_3.jpg';
+            $messages = [
+                'type' => 'image',
+                'originalContentUrl' => $imageUrl,
+                'previewImageUrl' => $imageMiniUrl
+            ];
         }
+        $replyToken = $event['replyToken'];
+        $data = [
+            'replyToken' => $reply,
+            'messages' => [$messages],
+         ];
+
         return $data;
     }
 
