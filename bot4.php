@@ -24,7 +24,7 @@
                     $data = setData(1,$event['replyToken'],$text);
                     sendMessage($data,$access_token);
                 }else if(strcmp($event['message']['text'],"รายชื่อ") == false){
-                    $data = setData(0,$event['replyToken'])
+                    $data = setData(0,$event['replyToken']);
                     sendMessage($data,$access_token);
                 }
             }
