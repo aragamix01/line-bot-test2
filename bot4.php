@@ -23,9 +23,10 @@
     
                     $conn->query($sql);
 
+                    $text = 'รู้แล้วจะสอนทำไมเยอะแยะ ช้อนไม่ได้แก่แบบเช่นะ';
                     $messages = [
                         'type' => 'text',
-                        'text' => 'รู้แล้วจะสอนทำไมเยอะแยะ ช้อนไม่ได้แก่แบบเช่นะ'
+                        'text' => $text
                     ];
                     $data = [
                         'replyToken' => $replyToken,
