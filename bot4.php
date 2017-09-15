@@ -60,10 +60,10 @@
                     ];
 
                     foreach($pickey as $obj) {
-                        if( strpos($event['message']['text'],$obj->keywords) !== false ){
+                        if( strpos($event['message']['text'],$obj['keywords']) !== false ){
                             $isPics = 1;
-                            $text = $obj->exText;
-                            $pics = $obj->picsName;
+                            $text = $obj['exText'];
+                            $pics = $obj['picsName'];
                         }
                     }
 
