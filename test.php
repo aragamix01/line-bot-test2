@@ -13,7 +13,7 @@ $messages = [
     ]
 ];
 
-$messages2 = => array(
+$messages2 = array(
     array(
         'type' => 'text',
         'text' => $text
