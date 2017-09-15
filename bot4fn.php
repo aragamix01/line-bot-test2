@@ -42,9 +42,11 @@
                     'text' => $text
                 ),
                 array(
-                    'type' => 'image',
-                    'originalContentUrl' => $imageUrl,
-                    'previewImageUrl' => $imageMiniUrl
+                    // 'type' => 'image',
+                    // 'originalContentUrl' => $imageUrl,
+                    // 'previewImageUrl' => $imageMiniUrl
+                    'type' => 'text',
+                    'text' => $text
                 )
             );
         }
