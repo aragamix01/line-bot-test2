@@ -13,17 +13,19 @@ $messages = [
     ]
 ];
 
-$messages2 = [
-    0 => [
-        'type' => 'text',
-        'text' => $textt
-    ],
-    1 => [
-        'type' => 'image',
-        'originalContentUrl' => $imageUrl,
-        'previewImageUrl' => $imageMiniUrl
-    ]
-];
+$messages2 = array(
+    'replyToken' => $replyToken,
+    'messages' => array(
+        array(
+            'type' => 'text',
+            'text' => $text
+        ),
+        array(
+            'type' => 'text',
+            'text' => $text
+        )
+    )
+);
 
 echo 'Is a '.gettype($messages);
 print_r($messages);
