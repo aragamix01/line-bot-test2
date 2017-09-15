@@ -39,7 +39,7 @@
             $messages = [
                 [
                     'type' => 'text',
-                    'text' => $textt
+                    'text' => $text
                 ],
                 [
                     'type' => 'image',
