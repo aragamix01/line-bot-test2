@@ -23,23 +23,67 @@
                     $text = 'ช้อนรู้แล้ว ช้อนไม่ได้แก่แบบเช่นะที่จะจำไม่ได้อ่ะ';
                     $data = setData(1,$event['replyToken'],$text);
                     sendMessage($data,$access_token);
-                }else if(strcmp($event['message']['text'],"รายชื่อ") == false){
-                    $data = setData(0,$event['replyToken']);
-                    sendMessage($data,$access_token);
-                }else{
-                    $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
-                    if ($result = $conn->query($sql_select)) {
-                        
-                            while ($obj = $result->fetch_object()) {
-                                if( strpos($event['message']['text'],$obj->key) !== false ){
-                                    $text = $obj->ans;
-                                    break;
-                                }
-                            }
-                            $result->close();
+                }
+                // }else if(strcmp($event['message']['text'],"รายชื่อ") == false){
+                    // $question = [
+                    //     0 => [
+                    //         'keywords' => 'สี',
+                    //         'ans' => 'สีเหลือง'
+                    //     ],
+                    //     1 => [
+                    //         'keywords' => 'สี',
+                    //         'ans' => 'สีเหลือง'
+                    //     ]
+                    // ];
+
+                //     $data = setData(0,$event['replyToken']);
+                //     sendMessage($data,$access_token);
+                // }
+                else{
+                    $isPics = 0;
+                    $pickey = [
+                        0 => [
+                            'keywords' => 'บ้านปัญ',
+                            'exText' => 'บ้านปัญไปตาม QR CODE นี้น้าา',
+                            'picsName' => 'https://still-beyond-73841.herokuapp.com/pun_room.jpg'
+                        ],
+                        1 => [
+                            'keywords' => 'บ้านรินะ',
+                            'exText' => 'บ้านรินะไปตาม QR CODE นี้น้าา',
+                            'picsName' => 'https://still-beyond-73841.herokuapp.com/rina_room.jpg'
+                        ],
+                        2 => [
+                            'keywords' => 'รายชื่อ',
+                            'exText' => 'รายชื่อด้อมที่ร่วมกับ GATE ทั้งหมด',
+                            'picsName' => 'https://still-beyond-73841.herokuapp.com/bnk48_3.jpg'
+                        ]
+                    ];
+
+                    foreach($pickey as $obj) {
+                        if( strpos($event['message']['text'],$obj->keywords) !== false ){
+                            $isPics = 1;
+                            $text = $obj->exText;
+                            $pics = $obj->picsName;
+                        }
                     }
-                    $data = setData(1,$event['replyToken'],$text);
-                    sendMessage($data,$access_token);
+
+                    if($isPics == 1){
+                        $data = setData(0,$event['replyToken'],$text,$pics);
+                    } else{
+                        $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
+                        if ($result = $conn->query($sql_select)) {
+                            
+                                while ($obj = $result->fetch_object()) {
+                                    if( strpos($event['message']['text'],$obj->key) !== false ){
+                                        $text = $obj->ans;
+                                        break;
+                                    }
+                                }
+                                $result->close();
+                        }
+                        $data = setData(1,$event['replyToken'],$text);
+                        sendMessage($data,$access_token);
+                    }
                 }
             }
         }

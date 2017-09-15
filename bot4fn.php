@@ -20,7 +20,7 @@
         $conn->close();
     }
 
-    function setData($isText,$reply,$text=""){
+    function setData($isText,$reply,$text="",$picsName=""){
 
         if($isText == 1){
             $messages = [
@@ -28,13 +28,13 @@
                 'text' => $text
             ];
         }else{
-            $imageUrl = 'https://still-beyond-73841.herokuapp.com/bnk48_3.jpg';
-            $imageMiniUrl = 'https://still-beyond-73841.herokuapp.com/rsz_1bnk48_3.jpg';
-            $messages = [
-                'type' => 'image',
-                'originalContentUrl' => $imageUrl,
-                'previewImageUrl' => $imageMiniUrl
-            ];
+            $imageUrl = $picsName;
+            $imageMiniUrl = $picsName;
+            // $messages = [
+            //     'type' => 'image',
+            //     'originalContentUrl' => $imageUrl,
+            //     'previewImageUrl' => $imageMiniUrl
+            // ];
         }
         $replyToken = $event['replyToken'];
         $data = [
