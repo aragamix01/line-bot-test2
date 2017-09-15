@@ -49,27 +49,28 @@
         //             'text' => $text
         //         )
         //     );
-        // }
-        $replyToken = $event['replyToken'];
-        // $data = [
-        //     'replyToken' => $reply,
-        //     'messages' => [$messages],
-        //  ];
-        $data = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text' => $text
-                ),
-                array(
-                    'type' => 'text',
-                    'text' => $text
-                )
-            )
-        );
-    }
 
+            $data = array(
+                'replyToken' => $replyToken,
+                'messages' => array(
+                    array(
+                        'type' => 'text',
+                        'text' => $text
+                    ),
+                    array(
+                        'type' => 'text',
+                        'text' => $text
+                    )
+                )
+            );
+            return $data;
+        }
+        $replyToken = $event['replyToken'];
+        $data = [
+            'replyToken' => $reply,
+            'messages' => [$messages],
+         ];
+        
         return $data;
     }
 
