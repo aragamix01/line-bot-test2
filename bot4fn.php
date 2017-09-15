@@ -37,15 +37,15 @@
             // ];
 
             $messages = [
-                [
-                    'type' => 'text',
-                    'text' => $text
-                ],
-                [
+                // [
+                //     'type' => 'text',
+                //     'text' => $text
+                // ],
+                // [
                     'type' => 'image',
                     'originalContentUrl' => $imageUrl,
                     'previewImageUrl' => $imageMiniUrl
-                ]
+                // ]
             ];
         }
         $replyToken = $event['replyToken'];
