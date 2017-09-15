@@ -13,17 +13,14 @@ $messages = [
     ]
 ];
 
-$messages2 = array(
-    'replyToken' => $replyToken,
-    'messages' => array(
-        array(
-            'type' => 'text',
-            'text' => $text
-        ),
-        array(
-            'type' => 'text',
-            'text' => $text
-        )
+$messages2 = => array(
+    array(
+        'type' => 'text',
+        'text' => $text
+    ),
+    array(
+        'type' => 'text',
+        'text' => $text
     )
 );
 
