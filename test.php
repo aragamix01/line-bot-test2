@@ -28,5 +28,5 @@ $messages2 = [
 echo 'Is a '.gettype($messages);
 print_r($messages);
 echo '<br>';
-print_r($messages);
+print_r($messages2);
 ?>
