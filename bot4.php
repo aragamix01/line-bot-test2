@@ -27,13 +27,13 @@
                     $isPics = 0;
                     $pickey = [
                         0 => [
-                            'keywords' => 'บ้านปัญ',
-                            'exText' => 'บ้านปัญไปตาม QR CODE นี้น้าา',
+                            'keywords' => 'ห้องปัญ',
+                            'exText' => 'ห้องปัญไปตาม QR CODE นี้น้าา',
                             'picsName' => 'https://still-beyond-73841.herokuapp.com/pun_room.jpg'
                         ],
                         1 => [
-                            'keywords' => 'บ้านรินะ',
-                            'exText' => 'บ้านรินะไปตาม QR CODE นี้น้าา',
+                            'keywords' => 'ห้องอิสึรินะ',
+                            'exText' => 'ห้องอิสึรินะไปตาม QR CODE นี้น้าา',
                             'picsName' => 'https://still-beyond-73841.herokuapp.com/rina_room.jpg'
                         ],
                         2 => [
