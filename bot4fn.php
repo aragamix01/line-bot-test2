@@ -35,6 +35,18 @@
             //     'originalContentUrl' => $imageUrl,
             //     'previewImageUrl' => $imageMiniUrl
             // ];
+
+            $messages = [
+                [
+                    'type' => 'text',
+                    'text' => $text
+                ],
+                [
+                    'type' => 'image',
+                    'originalContentUrl' => $imageUrl,
+                    'previewImageUrl' => $imageMiniUrl
+                ]
+            ];
         }
         $replyToken = $event['replyToken'];
         $data = [
