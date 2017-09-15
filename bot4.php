@@ -69,6 +69,7 @@
 
                     if($isPics == 1){
                         $data = setData(0,$event['replyToken'],$text,$pics);
+                        sendMessage($data,$access_token);
                     } else{
                         $sql_select = "select * from heroku_da1dc32cdc85254.knowledge";
                         if ($result = $conn->query($sql_select)) {
