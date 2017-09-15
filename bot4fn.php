@@ -50,20 +50,20 @@
         //         )
         //     );
 
-            $data = array(
-                'replyToken' => $replyToken,
-                'messages' => array(
-                    array(
-                        'type' => 'text',
-                        'text' => $text
-                    ),
-                    array(
-                        'type' => 'text',
-                        'text' => $text
-                    )
-                )
-            );
-            return $data;
+            // $data = array(
+            //     'replyToken' => $replyToken,
+            //     'messages' => array(
+            //         array(
+            //             'type' => 'text',
+            //             'text' => $text
+            //         ),
+            //         array(
+            //             'type' => 'text',
+            //             'text' => $text
+            //         )
+            //     )
+            // );
+            // return $data;
         }
         $replyToken = $event['replyToken'];
         $data = [
