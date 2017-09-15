@@ -12,5 +12,5 @@ $messages = [
     ]
 ];
 
-echo gettype($messages);
+echo 'Is a '.gettype($messages);
 ?>
