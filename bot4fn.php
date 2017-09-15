@@ -30,38 +30,23 @@
         }else{
             $imageUrl = $picsName;
             $imageMiniUrl = $picsName;
-            // $messages = [
-            //     'type' => 'image',
-            //     'originalContentUrl' => $imageUrl,
-            //     'previewImageUrl' => $imageMiniUrl
-            // ];
-
             $messages = [
-                0 => [
-                    'type' => 'text',
-                    'text' => $textt
-                ],
-                1 => [
-                    'type' => 'image',
-                    'originalContentUrl' => $imageUrl,
-                    'previewImageUrl' => $imageMiniUrl
-                ]
+                'type' => 'image',
+                'originalContentUrl' => $imageUrl,
+                'previewImageUrl' => $imageMiniUrl
             ];
 
-            // $data = array(
-            //     'replyToken' => $replyToken,
-            //     'messages' => array(
-            //         array(
-            //             'type' => 'text',
-            //             'text' => $text
-            //         ),
-            //         array(
-            //             'type' => 'text',
-            //             'text' => $text
-            //         )
-            //     )
-            // );
-            // return $data;
+            // $messages = [
+            //     0 => [
+            //         'type' => 'text',
+            //         'text' => $textt
+            //     ],
+            //     1 => [
+            //         'type' => 'image',
+            //         'originalContentUrl' => $imageUrl,
+            //         'previewImageUrl' => $imageMiniUrl
+            //     ]
+            // ];
         }
         $replyToken = $event['replyToken'];
         $data = [
