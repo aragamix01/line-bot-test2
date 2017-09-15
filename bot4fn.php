@@ -30,22 +30,22 @@
         }else{
             $imageUrl = $picsName;
             $imageMiniUrl = $picsName;
-            // $messages = [
-            //     'type' => 'image',
-            //     'originalContentUrl' => $imageUrl,
-            //     'previewImageUrl' => $imageMiniUrl
-            // ];
+            $messages = [
+                'type' => 'image',
+                'originalContentUrl' => $imageUrl,
+                'previewImageUrl' => $imageMiniUrl
+            ];
 
-            $messages = array(
-                array(
-                    'type' => 'text',
-                    'text' => $text
-                ),
-                array(
-                    'type' => 'text',
-                    'text' => $text
-                )
-            );
+            // $messages = array(
+            //     array(
+            //         'type' => 'text',
+            //         'text' => $text
+            //     ),
+            //     array(
+            //         'type' => 'text',
+            //         'text' => $text
+            //     )
+            // );
         }
         $replyToken = $event['replyToken'];
         $data = [

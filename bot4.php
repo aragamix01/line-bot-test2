@@ -23,23 +23,7 @@
                     $text = 'ช้อนรู้แล้ว ช้อนไม่ได้แก่แบบเช่นะที่จะจำไม่ได้อ่ะ';
                     $data = setData(1,$event['replyToken'],$text);
                     sendMessage($data,$access_token);
-                }
-                // }else if(strcmp($event['message']['text'],"รายชื่อ") == false){
-                    // $question = [
-                    //     0 => [
-                    //         'keywords' => 'สี',
-                    //         'ans' => 'สีเหลือง'
-                    //     ],
-                    //     1 => [
-                    //         'keywords' => 'สี',
-                    //         'ans' => 'สีเหลือง'
-                    //     ]
-                    // ];
-
-                //     $data = setData(0,$event['replyToken']);
-                //     sendMessage($data,$access_token);
-                // }
-                else{
+                } else{
                     $isPics = 0;
                     $pickey = [
                         0 => [
