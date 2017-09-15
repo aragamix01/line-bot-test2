@@ -48,7 +48,7 @@
                     'type' => 'text',
                     'text' => $text
                 ]
-            ]
+            ];
 
             // $data = array(
             //     'replyToken' => $replyToken,
