@@ -42,11 +42,9 @@
                     'text' => $textt
                 ],
                 1 => [
-                    // 'type' => 'image',
-                    // 'originalContentUrl' => $imageUrl,
-                    // 'previewImageUrl' => $imageMiniUrl
-                    'type' => 'text',
-                    'text' => $text
+                    'type' => 'image',
+                    'originalContentUrl' => $imageUrl,
+                    'previewImageUrl' => $imageMiniUrl
                 ]
             ];
 
