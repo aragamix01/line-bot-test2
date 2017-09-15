@@ -36,19 +36,19 @@
             //     'previewImageUrl' => $imageMiniUrl
             // ];
 
-        //     $messages = array(
-        //         array(
-        //             'type' => 'text',
-        //             'text' => $text
-        //         ),
-        //         array(
-        //             // 'type' => 'image',
-        //             // 'originalContentUrl' => $imageUrl,
-        //             // 'previewImageUrl' => $imageMiniUrl
-        //             'type' => 'text',
-        //             'text' => $text
-        //         )
-        //     );
+            $messages = [
+                0 => [
+                    'type' => 'text',
+                    'text' => $textt
+                ],
+                1 => [
+                    // 'type' => 'image',
+                    // 'originalContentUrl' => $imageUrl,
+                    // 'previewImageUrl' => $imageMiniUrl
+                    'type' => 'text',
+                    'text' => $text
+                ]
+            ]
 
             // $data = array(
             //     'replyToken' => $replyToken,
