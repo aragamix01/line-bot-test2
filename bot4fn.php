@@ -36,25 +36,38 @@
             //     'previewImageUrl' => $imageMiniUrl
             // ];
 
-            $messages = array(
+        //     $messages = array(
+        //         array(
+        //             'type' => 'text',
+        //             'text' => $text
+        //         ),
+        //         array(
+        //             // 'type' => 'image',
+        //             // 'originalContentUrl' => $imageUrl,
+        //             // 'previewImageUrl' => $imageMiniUrl
+        //             'type' => 'text',
+        //             'text' => $text
+        //         )
+        //     );
+        // }
+        $replyToken = $event['replyToken'];
+        // $data = [
+        //     'replyToken' => $reply,
+        //     'messages' => [$messages],
+        //  ];
+        $data = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
                 array(
                     'type' => 'text',
                     'text' => $text
                 ),
                 array(
-                    // 'type' => 'image',
-                    // 'originalContentUrl' => $imageUrl,
-                    // 'previewImageUrl' => $imageMiniUrl
                     'type' => 'text',
                     'text' => $text
                 )
-            );
-        }
-        $replyToken = $event['replyToken'];
-        $data = [
-            'replyToken' => $reply,
-            'messages' => [$messages],
-         ];
+            )
+        );
 
         return $data;
     }
