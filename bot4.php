@@ -26,22 +26,22 @@
                 } else{
                     $isPics = 0;
                     $pickey = [
+                        // 0 => [
+                        //     'keywords' => 'ห้องปัญ',
+                        //     'exText' => 'ห้องปัญไปตาม QR CODE นี้น้าา',
+                        //     'picsName' => 'https://still-beyond-73841.herokuapp.com/pun_room.jpg'
+                        // ],
                         0 => [
-                            'keywords' => 'ห้องปัญ',
-                            'exText' => 'ห้องปัญไปตาม QR CODE นี้น้าา',
-                            'picsName' => 'https://still-beyond-73841.herokuapp.com/pun_room.jpg'
-                        ],
-                        1 => [
                             'keywords' => 'ห้องอิสึรินะ',
                             'exText' => 'ห้องอิสึรินะไปตาม QR CODE นี้น้าา',
                             'picsName' => 'https://still-beyond-73841.herokuapp.com/rina_room.jpg'
                         ],
-                        2 => [
+                        1 => [
                             'keywords' => 'รายชื่อ',
                             'exText' => 'รายชื่อด้อมที่ร่วมกับ GATE ทั้งหมด',
                             'picsName' => 'https://still-beyond-73841.herokuapp.com/bnk48_3.jpg'
                         ],
-                        3 => [
+                        2 => [
                             'keywords' => 'ห้องซัทจัง',
                             'exText' => 'ห้องซัทจังไปตาม QR CODE นี้น้าา',
                             'picsName' => 'https://still-beyond-73841.herokuapp.com/satchan.jpg'
