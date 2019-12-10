@@ -28,8 +28,8 @@
                 'text' => $text
             ];
         }else{
-            $imageUrl = 'https://still-beyond-73841.herokuapp.com/bnk48_3.jpg';
-            $imageMiniUrl = 'https://still-beyond-73841.herokuapp.com/rsz_1bnk48_3.jpg';
+            $imageUrl = 'https://still-beyond-73841.herokuapp.com/tenten.jpg';
+            $imageMiniUrl = 'https://still-beyond-73841.herokuapp.com/tenten.jpg';
             $messages = [
                 'type' => 'image',
                 'originalContentUrl' => $imageUrl,
